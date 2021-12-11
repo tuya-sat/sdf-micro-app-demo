@@ -1,0 +1,45 @@
+{
+  "mock": true,
+  "api": [
+    {
+      "path": "/open-api/devices",
+      "method": "GET",
+      "res": {
+        "msg": "",
+        "success": true,
+        "data": [
+          {
+            "deviceID": "3342352342342",
+            "deviceName": "devicename1"
+          },
+          {
+            "deviceID": "1346456342342",
+            "deviceName": "devicename2"
+          },
+          {
+            "deviceID": "1342678742342",
+            "deviceName": "devicename3"
+          },
+          {
+            "deviceID": "1342352396785",
+            "deviceName": "devicename4"
+          },
+          {
+            "deviceID": "1342352966434",
+            "deviceName": "devicename5"
+          }
+        ]
+      },
+      "mock": true
+    },
+    {
+      "path": "/open-api/login/${deviceid}/out",
+      "method": "POST",
+      "res": {
+        "msg": "",
+        "success": true,
+        "data": {}
+      }
+    }
+  ]
+}
