@@ -1,0 +1,57 @@
+server:
+  port: 9880
+
+spring:
+  application:
+    name: sdf-micro-app-demo
+  main:
+    allow-bean-definition-overriding: true
+  code: ${spring.application.name}
+
+PROJECT_NAME: ${spring.application.name}
+
+# sdk所需配置
+app:
+  code: ${spring.application.name}
+
+private:
+  project:
+    code: test
+  key: MIICeAIBADANBgkqhkiG9w0BAQEFAASCAmIwggJeAgEAAoGBAOdfRvgEilmyGdXiu8puB42aN6hsOvAb3HNRED7XVyOcQr+vSuItD6M3DlsnUJecROkOQg69mWZhIqui9YibDuBzgz5gkg+Rx3K66tZb9jzwIIBv1XGVoxTjFfNZtq6+4tlmEq2OvSdL4iLvfJ7U7lIXRoDURWOcaYgas35BtYKnAgMBAAECgYEAlKwkbjp8rCZFc6q+ANWzBMqT+SWSubctcOwmBDtbQwal3YZGGA/cfIRkNS6OGt3PafI/gDlU2PSR0rhkDeOVKmxDCJm9ncDatne+0u6I4LPCJSmuYB9SuMwrRZi6N0ZF6L5k1kEI82PFbDjj0+9gwMiM0KL5PbLqUYqkzR7CKAECQQD2ZHLkuPY+XlWrZoJOApVZldkJcZgKZMWiBsOd1kpXVIKco7/idi2aioy+s2nfbhJhdpa/6ab88FpRhyabCGO/AkEA8GTkmP1VQADmF1z39gzZzAUOO90tG6nulHzK8ZFQ8tsWLVaualY4DyYUQWr6GDIlANFRR0POQEzMlqeHe8l7GQJAYDzv24KbO9Ug5SfO8aV0rF8pPNUPq8+cmiLGOVpAA0hRE9mp00yRl3FSdBIj4k9eAo+NZjxfKyC+RmXhoGBwhQJBAM+YITzo0HzECe81DsDBmjewSflyZ+jS18ANAGiZ+BCxF7axe09DA4g5dxaDHlRUwVWybQEg0fT/HVIgfERu2skCQQCeQumRrIroVzIX3mC7I41Qxn4VugkdNjyNcbyXI9IWgeAxAuzpq1/m1FQILPQaRipDKZPisUqgnU3cwbESG5b7
+public:
+  key: MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDnX0b4BIpZshnV4rvKbgeNmjeobDrwG9xzURA+11cjnEK/r0riLQ+jNw5bJ1CXnETpDkIOvZlmYSKrovWImw7gc4M+YJIPkcdyuurWW/Y88CCAb9VxlaMU4xXzWbauvuLZZhKtjr0nS+Ii73ye1O5SF0aA1EVjnGmIGrN+QbWCpwIDAQAB
+highway:
+  enable: true
+
+# 链接层域名
+connector:
+  api:
+    logging:
+      level: INFO
+      strategy: BODY
+
+# 往highway注册接口所需配置
+custom:
+  datasource: redis
+  registry: redis
+
+deploy:
+  region: AY
+
+is:
+  mirco:
+    app: true
+  private: true
+redis:
+  highway:
+    datasource:
+      host: 127.0.0.1
+      password: tuya123456
+      port: 6379
+    registry:
+      flush:
+        period: 2000
+      host: ${redis.highway.datasource.host}:${redis.highway.datasource.port}
+      password: ${redis.highway.datasource.password}
+runtime:
+  env: dev

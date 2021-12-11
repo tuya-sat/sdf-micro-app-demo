@@ -1,0 +1,42 @@
+{
+  "type": "micro-apps/v1.1",
+  "appName": "asset-management",
+  "supportedPlatform": ["DESKTOP"],
+  "annotations": {
+    "sdf.cli:microFramework": "REACT_TS"
+  },
+  "universalId": "869a3ff6-48bf-4dd2-8051-2d4899a47a6e",
+  "appEngine": "SAAS-OEM-APP",
+  "name": "lang.name",
+  "defaultMenuIcon": {
+    "type": "URL",
+    "url": "https://images.tuyacn.com/rms-static/c4e99ce0-de26-11eb-bb1c-dd1a7461f245-1625554365870.png?tyName=asset.png",
+    "name": ""
+  },
+  "description": "lang.description",
+  "entries": [],
+  "configs": [],
+  "privileges": [
+    {
+      "name": "lang.register",
+      "code": "PRDUCT_REGISTER"
+    }
+  ],
+  "apis": [
+    {
+      "namespace": "",
+      "method": "GET",
+      "path": "/products",
+      "privilegeCode": "",
+      "type": "OpenAPI"
+    },
+    {
+      "namespace": "",
+      "method": "POST",
+      "path": "/login/${deviceid}/out",
+      "privilegeCode": "PRDUCT_REGISTER",
+      "type": "OpenAPI"
+    }
+  ],
+  "dependencies": []
+}
