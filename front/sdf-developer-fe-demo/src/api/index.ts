@@ -1,6 +1,6 @@
-import axios, { AxiosInstance, AxiosRequestConfig } from 'axios';
-import req from './req';
-import res from './res';
+import axios, { AxiosInstance, AxiosRequestConfig } from "axios";
+import req from "./req";
+import res from "./res";
 
 export interface ResData<T> {
   code?: number;
@@ -14,30 +14,30 @@ export interface IAxiosInstance extends AxiosInstance {
   request<T = any, R = ResData<T>>(config: AxiosRequestConfig): Promise<R>;
   get<T = any, R = ResData<T>>(
     url: string,
-    config?: AxiosRequestConfig,
+    config?: AxiosRequestConfig
   ): Promise<R>;
   delete<T = any, R = ResData<T>>(
     url: string,
-    config?: AxiosRequestConfig,
+    config?: AxiosRequestConfig
   ): Promise<R>;
   head<T = any, R = ResData<T>>(
     url: string,
-    config?: AxiosRequestConfig,
+    config?: AxiosRequestConfig
   ): Promise<R>;
   post<T = any, R = ResData<T>>(
     url: string,
     data?: any,
-    config?: AxiosRequestConfig,
+    config?: AxiosRequestConfig
   ): Promise<R>;
   put<T = any, R = ResData<T>>(
     url: string,
     data?: any,
-    config?: AxiosRequestConfig,
+    config?: AxiosRequestConfig
   ): Promise<R>;
   patch<T = any, R = ResData<T>>(
     url: string,
     data?: any,
-    config?: AxiosRequestConfig,
+    config?: AxiosRequestConfig
   ): Promise<R>;
 }
 

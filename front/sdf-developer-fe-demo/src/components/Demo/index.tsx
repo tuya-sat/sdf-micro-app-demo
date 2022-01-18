@@ -1,28 +1,29 @@
-import { Form, Input, Button, Checkbox, Row, Col, message } from 'antd';
-import api from 'src/api';
+import { Form, Input, Button, Checkbox, Row, Col, message } from "antd";
+import api from "src/api";
 interface IProps {
   setAppid: (appid: string) => void;
   getList: () => void;
-  setspinLoading: React.Dispatch<React.SetStateAction<boolean>>
+  setspinLoading: React.Dispatch<React.SetStateAction<boolean>>;
 }
 const Demo = ({ setAppid, getList, setspinLoading }: IProps) => {
   const onFinish = (values: any) => {
     const { username } = values;
     if (!username) {
-      message.error('请输入要新增的资产名称');
-      return
+      message.error("请输入要新增的资产名称");
+      return;
     }
-    setspinLoading(true)
+    setspinLoading(true);
     api
-      .post('/custom-api/v1.0/assets', {
-        parent_asset_id: '',
+      .post("/custom-api/v1.0/assets", {
+        parent_asset_id: "",
         asset_name: username,
       })
       .then((res) => {
         setAppid(res.result);
-        getList()
+        getList();
       })
-      .catch((e) => console.log(e)).finally(() => setspinLoading(false));
+      .catch((e) => console.log(e))
+      .finally(() => setspinLoading(false));
   };
   return (
     <>
@@ -59,7 +60,6 @@ const Demo = ({ setAppid, getList, setspinLoading }: IProps) => {
           </Form>
         </Col>
       </Row>
-
     </>
   );
 };
