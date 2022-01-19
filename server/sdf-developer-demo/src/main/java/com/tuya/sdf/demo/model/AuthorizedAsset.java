@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 /**
  * @Description: 已经授权的资产
- * @auther: Medivh.chen@tuya.com
+ * @auther: developer@tuya.com
  * @date: 2021/04/20
  **/
 @Data

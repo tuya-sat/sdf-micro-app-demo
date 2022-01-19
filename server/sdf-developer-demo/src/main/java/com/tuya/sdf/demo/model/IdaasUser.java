@@ -6,7 +6,7 @@ import lombok.Data;
 import lombok.experimental.FieldDefaults;
 
 /**
- * @author benguan.zhou@tuya.com
+ * @author developer@tuya.com
  * @description
  * @date 2021/05/24
  */
