@@ -8,7 +8,7 @@ import lombok.experimental.FieldDefaults;
 import java.util.List;
 
 /**
- * @author benguan.zhou@tuya.com
+ * @author developer@tuya.com
  * @description
  * @date 2021/06/01
  */

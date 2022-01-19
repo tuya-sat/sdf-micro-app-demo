@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * <p> TODO
  *
- * @author @author qiufeng.yu@tuya.com
+ * @author @author developer@tuya.com
  * @since 2021/4/20 11:32 下午
  */
 @Mapper

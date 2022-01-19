@@ -7,7 +7,7 @@ import lombok.experimental.FieldDefaults;
 import lombok.experimental.SuperBuilder;
 
 /**
- * @author benguan.zhou@tuya.com
+ * @author developer@tuya.com
  * @description
  * @date 2021/05/24
  */

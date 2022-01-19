@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  * @description:
- * @author: benguan.zhou@tuya.com
+ * @author: developer@tuya.com
  * @date: 2021/05/24
  */
 @Data

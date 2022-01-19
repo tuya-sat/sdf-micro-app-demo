@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 /**
  * @Description: 资产授权请求数据模型
- * @auther: Medivh.chen@tuya.com
+ * @auther: developer@tuya.com
  * @date: 2021/04/20
  **/
 @Getter
