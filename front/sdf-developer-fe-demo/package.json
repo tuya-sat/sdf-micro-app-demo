@@ -12,8 +12,8 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@tuya-sat/micro-dev-component": "^0.0.1-beta.1",
-    "@tuya-sat/micro-script": "^0.0.1-beta.1",
+    "@tuya-sat/micro-dev-component": "0.0.4",
+    "@tuya-sat/micro-script": "0.0.4",
     "@types/react": "^17.0.33",
     "@types/react-dom": "^17.0.10",
     "@types/react-router-dom": "^5.3.2",

@@ -4,5 +4,6 @@ module.exports = {
     username: "", // Entry SaaS admin user name
     password: "", // Entry SaaS password
     logSign: true,
+    needProxyApi: ["/api", "/open-api", "/custom-api"],
   },
 };
