@@ -60,7 +60,7 @@ public class AssetService {
     private SpaceAbility spaceAbility;
 
     public String addAsset(String assetName, String parentAssetId) {
-        String spaceId = spaceAbility.querySpace(SdfContextHolder.getSdfSaas().getProjectCode(), "MICRO_APP_DEFAULT").getSpaceId();
+        String spaceId = spaceAbility.querySpace(SdfContextHolder.getSdfSaas().getProjectCode(), SdfContextHolder.getUser().getTenantCode()).getSpaceId();
         AssetAddReq request = new AssetAddReq();
         request.setName(assetName);
         request.setParentAssetId(parentAssetId);
