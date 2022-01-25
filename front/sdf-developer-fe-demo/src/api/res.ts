@@ -1,6 +1,6 @@
-import { AxiosResponse } from 'axios';
-import { message } from 'antd';
-import { ResData } from '.';
+import { AxiosResponse } from "axios";
+import { message } from "antd";
+import { ResData } from ".";
 
 const onFulfilled = (response: ResData<any>) => {
   const res = response.data;

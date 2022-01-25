@@ -51,7 +51,7 @@ const Page = () => {
           getList={getList}
           setspinLoading={setspinLoading}
         />
-        <Spin spinning={spinLoading} style={{ height: '100%' }}>
+        <Spin spinning={spinLoading} style={{ height: "100%" }}>
           <TableList
             datas={datas}
             getList={getList}
