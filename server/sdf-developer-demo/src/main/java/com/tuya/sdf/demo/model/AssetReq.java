@@ -15,5 +15,5 @@ public class AssetReq implements Serializable {
 
     private String parentAssetId;
 
-    private String assetName;
+    private String asset_name;
 }

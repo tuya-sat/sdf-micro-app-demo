@@ -3,6 +3,7 @@ package com.tuya.sdf.demo.controller;
 import com.tuya.sdf.demo.convert.AssetConvertor;
 import com.tuya.sdf.demo.model.AssetReq;
 import com.tuya.sdf.demo.model.AssetVO;
+import com.tuya.sdf.demo.model.Response;
 import com.tuya.sdf.demo.service.AssetService;
 import com.tuya.sdf.starter.util.SdfContextHolder;
 import lombok.extern.slf4j.Slf4j;
@@ -26,23 +27,23 @@ public class AssetController {
     private AssetService assetService;
 
     @PostMapping
-    public String addAsset(@RequestBody AssetReq req) {
-        return assetService.addAsset(req.getAssetName(), req.getParentAssetId());
+    public Response<String> addAsset(@RequestBody AssetReq req) {
+        return Response.success(assetService.addAsset(req.getAsset_name(), req.getParentAssetId()));
     }
 
     @PutMapping(value = "/{asset_id}")
-    public Boolean updateAsset(@PathVariable("asset_id") String assetId, @RequestBody AssetReq req) {
-        return assetService.updateAsset(assetId, req.getAssetName());
+    public Response<Boolean> updateAsset(@PathVariable("asset_id") String assetId, @RequestBody AssetReq req) {
+        return Response.success(assetService.updateAsset(assetId, req.getAsset_name()));
     }
 
     @DeleteMapping(value = "/{asset_id}")
-    public Boolean deleteAsset(@PathVariable("asset_id") String assetId) {
-        return assetService.deleteAsset(assetId);
+    public Response<Boolean> deleteAsset(@PathVariable("asset_id") String assetId) {
+        return Response.success(assetService.deleteAsset(assetId));
     }
 
     @GetMapping(value = "/{asset_id}")
-    public List<AssetVO> getSubAssetByFatherId(@PathVariable("asset_id") String assetId) {
-        return AssetConvertor.$
-                .toAssetVOList(assetService.getChildAssetListBy(SdfContextHolder.getUser().getUserId(), assetId));
+    public Response<List<AssetVO>> getSubAssetByFatherId(@PathVariable("asset_id") String assetId) {
+        return Response.success((AssetConvertor.$
+                .toAssetVOList(assetService.getChildAssetListBy(SdfContextHolder.getUser().getUserId(), assetId))));
     }
 }
