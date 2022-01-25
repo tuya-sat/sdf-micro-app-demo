@@ -10,7 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @desc
  * @since 2021/11/19
  */
-@SpringBootApplication(scanBasePackages = {"com.tuya.sdf.demo", "com.tuya.sdf.starter", "com.tuya.highway"})
+@SpringBootApplication(scanBasePackages = {"com.tuya.sdf.demo", "com.tuya.sdf.starter"})
 @ConnectorScan(basePackages = {"com.tuya.sdf.**.connector"})
 public class SdfDemoApplication {
 

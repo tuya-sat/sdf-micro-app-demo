@@ -1,7 +1,5 @@
 package com.tuya.sdf.demo.model;
 
-import io.swagger.annotations.ApiModelProperty;
-import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -15,9 +13,7 @@ import java.io.Serializable;
 @Data
 public class AssetReq implements Serializable {
 
-    @Schema(required = false, description = "父资产ID", example = "id1")
     private String parentAssetId;
 
-    @Schema(required = true, description = "资产名称", example = "资产1")
-    private String assetName;
+    private String asset_name;
 }

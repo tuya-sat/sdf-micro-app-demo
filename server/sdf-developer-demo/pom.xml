@@ -11,13 +11,13 @@
 
     <groupId>com.tuya</groupId>
     <artifactId>sdf-developer-demo</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.1.0-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <sdf-developer-starter.version>1.0.0-SNAPSHOT</sdf-developer-starter.version>
+        <sdf-developer-starter.version>1.1.0-SNAPSHOT</sdf-developer-starter.version>
         <mapstruct.version>1.4.1.Final</mapstruct.version>
     </properties>
 
@@ -35,7 +35,7 @@
         <dependency>
             <groupId>com.tuya</groupId>
             <artifactId>sdf-developer-starter</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>${sdf-developer-starter.version}</version>
         </dependency>
 
         <dependency>

@@ -39,7 +39,6 @@ public class AssetService {
     private static final int PAGE_NO = 1;
     private static final int PAGE_SIZE = 100;
     private static final String ASSET_TOP_ID = "-1";
-
     private final AtomicInteger atomicInteger = new AtomicInteger(1);
     private final int corePoolSize = 50;
     private final int maximumPoolSize = 50;
@@ -52,15 +51,13 @@ public class AssetService {
 
     @Autowired
     private AssetAbility assetAbility;
-
     @Autowired
     private IdaasUserAbility idaasUserAbility;
-
     @Autowired
-    private SpaceAbility spaceAbility;
+    private SpaceService spaceService;
 
     public String addAsset(String assetName, String parentAssetId) {
-        String spaceId = spaceAbility.querySpace(SdfContextHolder.getSdfSaas().getProjectCode(), SdfContextHolder.getUser().getTenantCode()).getSpaceId();
+        String spaceId = spaceService.getSpaceId(SdfContextHolder.getSdfSaas().getProjectCode(), SdfContextHolder.getUser().getTenantCode());
         AssetAddReq request = new AssetAddReq();
         request.setName(assetName);
         request.setParentAssetId(parentAssetId);
@@ -127,10 +124,6 @@ public class AssetService {
             assert executorService != null;
             executorService.execute(() -> {
                 try {
-                    //当前线程设置ak、sk信息
-                    //configuration.getApiDataSource().setAk(rawAk);
-                    //configuration.getApiDataSource().setSk(rawSk);
-
                     List<Asset> subList = getChildAssetsBy(id);
                     if (!CollectionUtils.isEmpty(subList)) {
                         List<Asset> tempList =
@@ -140,7 +133,6 @@ public class AssetService {
                 } catch (Exception e) {
                     log.warn("getSubAssetByFatherId#getChildAssetListBy,assetCount  exception: " + e.getMessage(), e);
                 } finally {
-                    //configuration.getApiDataSource().clear();
                     c1.countDown();
                 }
             });
