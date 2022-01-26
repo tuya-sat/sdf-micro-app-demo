@@ -17,7 +17,7 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <sdf-developer-starter.version>1.1.0-SNAPSHOT</sdf-developer-starter.version>
+        <sdf-developer-starter.version>1.1.0</sdf-developer-starter.version>
         <mapstruct.version>1.4.1.Final</mapstruct.version>
     </properties>
 
