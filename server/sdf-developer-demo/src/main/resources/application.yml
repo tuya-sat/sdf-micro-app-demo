@@ -1,0 +1,25 @@
+server:
+  port: 9880
+
+spring:
+  application:
+    name: sdf-micro-app-demo
+  main:
+    allow-bean-definition-overriding: true
+  code: ${spring.application.name}
+
+PROJECT_NAME: ${spring.application.name}
+
+# sdk所需配置
+app:
+  code: ${spring.application.name}
+
+developer:
+  code:
+  key:
+
+connector:
+  api:
+    logging:
+      level: INFO
+      strategy: BODY

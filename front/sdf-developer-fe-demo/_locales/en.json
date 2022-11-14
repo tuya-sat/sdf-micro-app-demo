@@ -1,0 +1,7 @@
+{
+  "name": "Asset Management",
+  "description": "Template management micro application",
+  "subMenu": "Secondary menu",
+  "register": "Register device",
+  "delete": "Delete Template"
+}
